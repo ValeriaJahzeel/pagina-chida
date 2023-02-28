@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+
+<body>
+     <fieldset>
+          <legend>Detalles de la foto</legend>
+
+          
+          <!-- Tabla para generar la seccion de dos columnas-->
+          <table>
+               <tr>
+                    <td colspan="500">
+                         <form action="" method="get">
+                              <p>
+                                   Titulo
+                                   <br>
+                                   <input type="text" name="titulo" id="titulo" maxlength="100" size="80">
+                              </p>
+                              <p>
+                                   Descripcion
+                                   <br>
+                                   <!-- <input type="text" name="descripcion" id="descipcion" style="width: 700px; height: 140px"> -->
+                                   <textarea name="descipcion" id="descipcion" cols="80" rows="10"></textarea>
+               
+                              </p>
+                         </form>
+                    </td>
+               </tr>
+
+               <tr> <!-- Fila de la tabla-->
+                    <td> <!-- Columna 1-->
+                         <p>
+                              <label for="continente">Continente</label>
+                              <br>
+                              <select name="continente" id="continente">
+                                   <option value="seleccion">Escoger continente</option>
+                                   <option value="africa">Africa</option>
+                                   <option value="asia">Asia</option>
+                                   <option value="europa">Europa</option>
+                                   <option value="nAmerica">Norte America</option>
+                                   <option value="sAmerica">Sur America</option>
+                              </select>
+                         </p>
+                         <p>
+                              <label for="pais">Pais</label>
+                              <br>
+                              <select name="pais" id="pais">
+                                   <option value="seleccion">Pais</option>
+                                   <option value="canada">Canada</option>
+                                   <option value="mexico">Mexico</option>
+                                   <option value="usa">Estados Unidos</option>
+                              </select>
+                         </p>
+                         <p>
+                              <label for="ciudad">Ciudad</label>
+                              <br>
+                              <input list="ciudad" id="ciudad" name="ciudad" size="50">
+                              <datalist id="ciudad">
+                                   <option value="calgary">
+                                   <option value="montreal">
+                                   <option value="toronto">
+                                   <option value="vancouber">
+                                   <option value="tlaxcala">
+                              </datalist>
+                         </p>
+                         <p>
+                              Acepto la licencia de software <input type="checkbox" name="software" id="software">
+                         </p>
+                         <p>
+                              Califica esta foto:
+                              <br>
+                              <input type="number" name="calificacion" id="calificacion" style="width: 50px">
+                         </p>
+                         <p>
+                              Colección de color:
+                              <br>
+                              <input type="color" name="color" id="color">
+                         </p>
+                         <p>
+                              <button>
+                                   Enviar
+                              </button>
+                              <button>
+                                   Limpiar 
+                              </button>
+                         </p>
+                    </td>
+
+
+                    <td> <!-- Columna 2-->
+                         <p>
+                              Copyright?
+                              <br>
+                              <input type="radio" name="copyright"> Todos los derechos reservados
+                              <br>
+                              <input type="radio" name="creative_commons" checked> Creative Commons
+                              <br>
+                              Licencias Creative Commons
+                              <br>
+                              <input type="checkbox" name="licencia" id="atribucion"> Atribucion
+                              <br>
+                              <input type="checkbox" name="licencia" id="no_comercial"> No comercial
+                              <br>
+                              <input type="checkbox" name="licencia" id="no_derivativos"> No hay trabajos derivativos
+                              <br>
+                              <input type="checkbox" name="licencia" id="compartir"> Compartir por igual
+                         </p>
+                         
+                         <p>
+                              Fecha de toma:
+                              <br>
+                              <input type="date" name="fecha" id="fecha">
+                         </p>
+                         <p>
+                              Hora de toma: 
+                              <br>
+                              <input type="time" name="hora" id="hora">
+                         </p>
+                    </td>
+               </tr>
+
+          </table>
+
+     </fieldset>
+</body>
+
+</html>

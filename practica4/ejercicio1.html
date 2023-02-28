@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadatos de la pagina, informacion del navegador-->
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Formulario de registro - Mi web</title>
+</head>
+
+<body>
+     <h1>Formulario de registro</h1>
+
+     <!-- form:get-->
+     <form action="" method="get">
+          <!-- El name no se debe repetir con los demas, el id igual se recomienda que no se repita-->
+          <!-- Se puede conner un elemento de bloque para separar -->
+          <p>
+               Nombre: <input type="text" name="nombre" id="nombre" maxlength="50" required>
+          </p>
+          <p>
+               Apellidos: <input type="text" name="apellidos" id="apellidos" maxlength="50">
+          </p>
+          <p>
+               <!-- Si queremos que sean cosas mutuamente  excuyentes (que solo se pueda seleccionar uno) deben contener el mismo name-->
+               <!-- el id sirve para manipular el elemento en JS o CSS-->
+               Sexo:
+               <input type="radio" name="sexo" value="h">hombre
+               <input type="radio" name="sexo" value="m">mujer
+               <input type="radio" name="sexo" value="t">transgenero
+               <input type="radio" name="sexo" value="nb">no binario
+          </p>
+          <p>
+               Correo: <input type="text" name="correo" id="correo" maxlength="50">
+               <br>
+               <!-- email valida la estructura de un correo electronico-->
+               Email: <input type="email" name="email" id="email">
+          </p>
+          <!---->
+          <p>
+               <!-- checked es el que mantiene seleccionada la casilla por default-->
+               <input type="checkbox" name="info" checked>
+               Deseo recibir información sobre novedades y ofertas"
+          </p>
+          <p>
+               <input type="checkbox" name="condicones" id="condicones">
+               Decalaro haber leido aceptar las condiciones generales del programa
+          </p>
+          <p>
+               <!--El values es el texto que aparece en el boton-->
+               <input type="submit" value="Enviar">
+          </p>
+
+     </form>
+
+</body>
+
+</html>
