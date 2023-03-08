@@ -1,0 +1,148 @@
+h1,
+h2,
+h3,
+h4,
+nav,
+foter {
+     font-family: "Trebuchet MS", "Lucida Grande", Tahoma, sans-serif;
+}
+
+body {
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     /*Las fuentes se van seleccionando, por si no hay una*/
+     font-size: 100%;
+     background-color: rgb(33, 54, 66);
+}
+
+main {
+     /*El em es relativo al contenedor en el que se encuentr*/
+     background-color: white;
+     margin-top: 1em;
+     margin-right: 4em;
+     margin-bottom: 1em;
+     margin-left: 4em;
+     padding: 0.5em;
+}
+
+h1 {
+     /*El font size es un contenedor relativo"*/
+     font-size: 1.5rem
+}
+
+h3 {
+     font-size: 0.75 rem;
+
+}
+
+h3 {
+     font-size: 1em;
+     border-bottom: solid 1pt rgb(153, 153, 153);
+     margin: 0 0 0.5em 0;
+}
+
+p {
+     font-size: 1rem;
+     margin-top: 0em;
+     margin-right: 0em;
+     margin-bottom: 0.5em;
+     margin-left: 0em;
+     letter-spacing: 1px;
+}
+
+nav {
+     font-size: 1.125rem;
+     background-color: rgb(61, 98, 113);
+     padding: 0.25em;
+}
+
+/*va a buscar las listas desordenadas dentro de  la barra de navegacion*/
+nav ul li {
+     list-style: none;
+     /*Elimina el estidlo de la lista*/
+     display: inline;
+     /*se va a desplegar en la misma linea*/
+}
+
+/*modificar el espaciado de los elementos dentro de la barra de navegacion*/
+nav a {
+     padding: 0.25em;
+}
+
+/*modificar atributos de la pseudoclase*/
+a:link {
+     /*enlaces*/
+     font-weight: bold;
+     color: rgb(92, 220, 249);
+}
+
+a:visited {
+     /*enlaces visitados*/
+     color: rgb(20, 236, 107);
+}
+
+a:hover {
+     /*lo que se cuando pasas por encima de un link*/
+     background-color: rgb(255, 255, 204);
+}
+
+/* -------------------------------- C L A S E S ----------------------------------*/
+/* siempre que haya un punto, significa una referencia a una clase*/
+/* rgba  la a significa el nivel de opacidad en el documento*/
+.titulo {
+     font-size: 0.875rem;
+     color: #728B96;
+     font-style: italic;
+}
+
+.estanque {
+     border: 5px dotted pink;
+     background-color: yellow;
+     font-size: 12px;
+}
+
+figure {
+     margin: 0.5em 0em 0.5em 0em;
+}
+
+figure img {
+     padding: 0.25em;
+     border: solid 1.5px #999999;
+}
+
+figure div {
+     margin: 0.25em 0em 2em 0em;
+     padding: 0.5em;
+     width: 500px;
+     border: solid 1.5px #999999;
+     border-radius: 4px;
+     /*hacer redondo los bordes*/
+     background: linear-gradient(gray, white);
+}
+
+figure div p {
+     font-size: 70%;
+     margin: 0;
+}
+
+figure div img {
+     padding: 0;
+     border: 0;
+}
+
+/*solo lo aplica a los identificadres, para cambiar solamente una parte del codigo*/
+#revisiones {
+     margin-top: 1em;
+}
+
+#revisiones div {
+     border-bottom: dashed 1pt #999999;
+     margin-bottom: 1.25em;
+}
+
+/*modifica el header y el footer*/
+header,
+footer {  
+     color: white; /*color de letra*/
+     background-color: #3D6271;
+     margin: 0em 4em 0.5em 4em;
+}

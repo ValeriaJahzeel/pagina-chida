@@ -1,0 +1,86 @@
+.sidepanel {
+     width: 0;
+     position: fixed;
+     z-index: 9999999;
+     height: 100%;
+     top: 0;
+     left: 0;
+     background-color: #111;
+     overflow-x: hidden;
+     transition: 0.5s;
+     padding-top: 60px;
+}
+
+.sidepanel a {
+     padding: 8px 8px 8px 32px;
+     text-decoration: none;
+     font-size: 20px;
+     color: #fff;
+     display: block;
+     transition: 0.3s;
+}
+
+.sidepanel a:hover {
+     color: #34b1fa;
+}
+
+.sidepanel a.active {
+     color: #34b1fa;
+}
+
+.sidepanel .closebtn {
+     cursor: pointer;
+     position: relative;
+     top: 0;
+     right: 25px;
+     font-size: 36px;
+}
+
+.openbtn {
+     cursor: pointer;
+     background-color: transparent;
+     color: rgb(103, 78, 173);
+     border: none;
+}
+
+header {
+     height: 360px;
+     z-index: 10;
+}
+
+.header-banner {
+     background-color: #333;
+     background-image: url('https://wwwhatsnew.com/wp-content/uploads/2021/05/captura113-1.jpg');
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     width: 100%;
+     height: 300px;
+}
+
+header h1 {
+     background-color: black;
+     color: #fff;
+     padding: 0 1rem;
+     position: absolute;
+     top: 4rem;
+     left: 4rem;
+     font-size: 50px;
+     opacity: 10%;
+}
+
+.transparencia {
+     opacity: 80%;
+
+}
+
+.fixed-header {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+}
+
+.visible-title {
+     visibility: visible;
+}
