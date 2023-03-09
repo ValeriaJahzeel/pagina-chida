@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <link rel="stylesheet" href="Style/reset.css">
+     <link rel="stylesheet" href="Style/genericos.css">
+     <link rel="stylesheet" href="Style/barra_navegacion.css">
+     <link rel="stylesheet" href="Style/carousel.css">
+     <link rel="stylesheet" href="Style/footer.css">
+
+     <script src="JavaScript/navegacion.js"></script>
+     
+     <link rel="shoortcut icon" href="favicon.ico" type="image/x-icon">
+     <title>Tutoriales</title>
+</head>
+
+
+<body>
+     <!--Encabezado-->
+     <header>
+
+          <!--  Barra de navegacion   -->
+          <div id="mySidepanel" class="sidepanel">
+               <div class="closebtn" onclick="closeNav()">x</div>
+               <nav>
+                    <a href="index.html">Inicio</a><br>
+                    <a href="http://127.0.0.1:3000/StaticSite/Noticias.html">Noticias</a><br>
+                    <a href="etica.html">Ética de la IA</a><br>
+                    <a href="paradigmas.html">Paradigmas</a><br>
+               </nav>
+          </div>
+          <div class="row">
+               <button class="openbtn" onclick="openNav()"><img src="images/menu.png"
+                         alt="imagen barra de navegacion"></button>
+               <div class="col">
+                    <p>I.A.</p>
+               </div>
+          </div>
+          <div class="header-banner ">
+               <h1 class="transparencia">Tutoriales y cosas interesantes</h1>
+          </div>
+          <div class="clear"></div>
+     </header>
+
+     <main>
+          <!-- Prorgamando Inteligencias Artificiales -->
+          <section id="programando">
+               <p>
+                    <br>
+               <h2>Programando Inteligencias Artificiales</h2>
+               <br>
+               </p>
+               <div class="carousel fondo">
+                    <ul class="carousel__viewport">
+                         <li id="programando1" tabindex="0" class="carousel__slide">
+                              <div class="carousel__snapper">
+                                   <iframe class="sin-borde" width="560" height="400"
+                                        src="https://www.youtube.com/embed/W8AeOXa_FqU" title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                              </div>
+                              <a href="#programando4" class="carousel__prev">Go to last slide</a>
+                              <a href="#programando2" class="carousel__next">Go to next slide</a>
+                         </li>
+                         <li id="programando2" tabindex="0" class="carousel__slide">
+                              <div class="carousel__snapper">
+                                   <iframe class="sin-borde" width="560" height="400"
+                                        src="https://www.youtube.com/embed/IeeD81jJ7uw" title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                              </div>
+                              <a href="#programando1" class="carousel__prev">Go to previous slide</a>
+                              <a href="#programando3" class="carousel__next">Go to next slide</a>
+                         </li>
+                         <li id="programando3" tabindex="0" class="carousel__slide">
+                              <div class="carousel__snapper">
+                                   <iframe class="sin-borde" width="560" height="400"
+                                        src="https://www.youtube.com/embed/fHwV-2psEHA" title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                              </div>
+                              <a href="#programando2" class="carousel__prev">Go to previous slide</a>
+                              <a href="#programando4" class="carousel__next">Go to next slide</a>
+                         </li>
+                         <li id="programando4" tabindex="0" class="carousel__slide">
+                              <div class="carousel__snapper">
+                                   <iframe class="sin-borde" width="560" height="400"
+                                        src="https://www.youtube.com/embed/h2sOsYM8Po0" title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                              </div>
+                              <a href="#programando3" class="carousel__prev">Go to previous slide</a>
+                              <a href="#programando1" class="carousel__next">Go to first slide</a>
+                         </li>
+                    </ul>
+                    <aside class="carousel__navigation">
+                         <ul class="carousel__navigation-list">
+                              <li class="carousel__navigation-item">
+                                   <a href="#programando1" class="carousel__navigation-button">Go to slide 1</a>
+                              </li>
+                              <li class="carousel__navigation-item">
+                                   <a href="#programando2" class="carousel__navigation-button">Go to slide 2</a>
+                              </li>
+                              <li class="carousel__navigation-item">
+                                   <a href="#programando3" class="carousel__navigation-button">Go to slide 3</a>
+                              </li>
+                              <li class="carousel__navigation-item">
+                                   <a href="#programando4" class="carousel__navigation-button">Go to slide 4</a>
+                              </li>
+                         </ul>
+                    </aside>
+               </div>
+          </section>
+
+
+          <!-- Probando Inteligencias Artificales-->
+          <section id="pruebas">
+               <p>
+                    <br>
+               <h2>Probando IA´s</h2>
+               <br>
+               </p>
+               <div class="carousel fondo">
+                    <ul class="carousel__viewport">
+                         <li id="probando1" tabindex="0" class="carousel__slide">
+                              <div class="carousel__snapper">
+                                   <iframe class="sin-borde" width="560" height="400"
+                                        src="https://www.youtube.com/embed/Lr8CsMVuL4Q" title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                              </div>
+                              <a href="#probando4" class="carousel__prev">Go to last slide</a>
+                              <a href="#probando2" class="carousel__next">Go to next slide</a>
+                         </li>
+                         <li id="probando2" tabindex="0" class="carousel__slide">
+                              <div class="carousel__snapper">
+                                   <iframe class="sin-borde" width="560" height="400"
+                                        src="https://www.youtube.com/embed/72HuQxnV3Bw" title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                              </div>
+                              <a href="#probando1" class="carousel__prev">Go to previous slide</a>
+                              <a href="#probando3" class="carousel__next">Go to next slide</a>
+                         </li>
+                         <li id="probando3" tabindex="0" class="carousel__slide">
+                              <div class="carousel__snapper">
+                                   <iframe class="sin-borde" width="560" height="400"
+                                        src="https://www.youtube.com/embed/fHwV-2psEHA" title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                              </div>
+                              <a href="#probando2" class="carousel__prev">Go to previous slide</a>
+                              <a href="#probando4" class="carousel__next">Go to next slide</a>
+                         </li>
+                         <li id="probando4" tabindex="0" class="carousel__slide">
+                              <div class="carousel__snapper">
+                                   <iframe class="sin-borde" width="560" height="400"
+                                        src="https://www.youtube.com/embed/h2sOsYM8Po0" title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                              </div>
+                              <a href="#probando3" class="carousel__prev">Go to previous slide</a>
+                              <a href="#probando1" class="carousel__next">Go to first slide</a>
+                         </li>
+                    </ul>
+                    <aside class="carousel__navigation">
+                         <ul class="carousel__navigation-list">
+                              <li class="carousel__navigation-item">
+                                   <a href="#probando1" class="carousel__navigation-button">Go to slide 1</a>
+                              </li>
+                              <li class="carousel__navigation-item">
+                                   <a href="#probando2" class="carousel__navigation-button">Go to slide 2</a>
+                              </li>
+                              <li class="carousel__navigation-item">
+                                   <a href="#probando3" class="carousel__navigation-button">Go to slide 3</a>
+                              </li>
+                              <li class="carousel__navigation-item">
+                                   <a href="#probando4" class="carousel__navigation-button">Go to slide 4</a>
+                              </li>
+                         </ul>
+                    </aside>
+               </div>
+          </section>
+
+          <!-- Carousel de conferencias  -->
+          <section id="conferencias">
+               <p>
+                    <br>
+               <h2>Conferencias</h2>
+               <br>
+               </p>
+               <div class="carousel fondo">
+                    <ul class="carousel__viewport">
+                         <li id="conferencias1" tabindex="0" class="carousel__slide">
+                              <div class="carousel__snapper">
+                                   <iframe class="sin-borde" width="560" height="400"
+                                        src="https://www.youtube.com/embed/GqKnlBq2MA4" title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                              </div>
+                              <a href="#conferencias4" class="carousel__prev">Go to last slide</a>
+                              <a href="#conferencias2" class="carousel__next">Go to next slide</a>
+                         </li>
+                         <li id="conferencias2" tabindex="0" class="carousel__slide">
+                              <div class="carousel__snapper">
+                                   <iframe class="sin-borde" width="560" height="400"
+                                        src="https://www.youtube.com/embed/znq3ql6wqnE" title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen>
+                                   </iframe>
+                              </div>
+                              <a href="#conferencias1" class="carousel__prev">Go to previous slide</a>
+                              <a href="#conferencias3" class="carousel__next">Go to next slide</a>
+                         </li>
+                         <li id="conferencias3" tabindex="0" class="carousel__slide">
+                              <div class="carousel__snapper">
+                                   <iframe class="sin-borde" width="560" height="400"
+                                        src="https://www.youtube.com/embed/_tA5cinv0U8" title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                              </div>
+                              <a href="#conferencias2" class="carousel__prev">Go to previous slide</a>
+                              <a href="#conferencias4" class="carousel__next">Go to next slide</a>
+                         </li>
+                         <li id="conferncias4" tabindex="0" class="carousel__slide">
+                              <div class="carousel__snapper">
+                                   <iframe class="sin-borde" width="560" height="400"
+                                        src="https://www.youtube.com/embed/18QBF0LifbY" title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                              </div>
+                              <a href="#conferencias3" class="carousel__prev">Go to previous slide</a>
+                              <a href="#conferencias1" class="carousel__next">Go to first slide</a>
+                         </li>
+                    </ul>
+                    <aside class="carousel__navigation">
+                         <ul class="carousel__navigation-list">
+                              <li class="carousel__navigation-item">
+                                   <a href="#carousel__slide1" class="carousel__navigation-button">Go to slide 1</a>
+                              </li>
+                              <li class="carousel__navigation-item">
+                                   <a href="#conferencias2" class="carousel__navigation-button">Go to slide 2</a>
+                              </li>
+                              <li class="carousel__navigation-item">
+                                   <a href="#conferencias3" class="carousel__navigation-button">Go to slide 3</a>
+                              </li>
+                              <li class="carousel__navigation-item">
+                                   <a href="#conferencias4" class="carousel__navigation-button">Go to slide 4</a>
+                              </li>
+                         </ul>
+                    </aside>
+               </div>
+          </section>
+     </main>
+
+
+     <section id="end" class="section has-img-bg pb-0 footer_background">
+          <div class="container">
+               <div class="row2 align-items-center">
+                    <div class="col-md-5 my-3">
+                         <h4 class="mb-0">Equipo</h4>
+                         <p class="mb-4">
+                              Valeria Jahzeel Castañon<br>
+                              Miguel Angel Sanchez Zanjuampa<br>
+                              Eliud Roman Gutierrez Perez<br>
+                              Dominguez Iglesias Edgar Ivan<br>
+                              Navil Pineda Rugerio<br>
+                         </p>
+
+                         <p class="mb-4">Unidad Profesional Interdisplinaria Campus Tlaxcala</p>
+                    </div>
+                    <div id="footer_nav" class="col-md-7">
+                         <h4>
+                              Explora nuestras otras secciones!
+                         </h4>
+                         <nav class="footer_nav">
+                              <a href="index.html">Inicio</a><br>
+                              <a href="http://127.0.0.1:3000/StaticSite/Noticias.html">Noticias</a><br>
+                              <a href="etica.html">Ética de la IA</a><br>
+                              <a href="paradigmas.html">Paradigmas</a><br>
+                         </nav>
+                    </div>
+               </div>
+
+               <footer class="mt-5 py-4 border-top border-secondary">
+                    <p>
+                         <em>Equipo1 &copy; <time>2023</time> Todos los derechos reservados xd</em>
+                    </p>
+               </footer>
+          </div>
+     </section>
+
+</body>
+
+</html>

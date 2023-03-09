@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="Style/estiloM.css">
+    <link rel="stylesheet" href="Style/footer.css">
+
+    <script src="JavaScript/news.js"></script>
+
+    <link rel="shoortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>IA News</title>
+</head>
+
+<body>
+
+    <section class="ENCABEZADO">
+
+        <div id="mySidepanel" class="sidepanel">
+            <div class="closebtn" onclick="closeNav()">x</div>
+            <nav>
+                <a href="index.html">Inicio</a><br>
+                <a href="tutos.html">Canales de Youtube</a><br>
+                <a href="etica.html">Ética de la IA</a><br>
+                <a href="paradigmas.html">Paradigmas</a><br>
+            </nav>
+        </div>
+        <div class="row" style="float: inline-start;">
+            <button class="openbtn" onclick="openNav()"><img src="images/menu.png" alt="menu"></button>
+            <div class="col">
+                <p>I.A.</p>
+            </div>
+        </div>
+
+        <a href="Noticias.html">
+            <img src="images/IANews.png" alt="Logotipo de IA news" class="IANews" style="float: right;">
+        </a>
+
+        <h1 class="TITULO">
+            Dia a dia con la IA
+        </h1>
+    </section>
+
+    <header>
+        <nav>
+            <span class="cat" onclick="buscar('Chatbots IA')">Chatbots</span>
+            <span class="cat" onclick="buscar('Uso de inteligencia artificial en medicina')">Medicina</span>
+            <span class="cat" onclick="buscar('Avances en la IA')">Avances</span>
+            <span class="cat" onclick="buscar('Peligros con la IA')">Malas noticias</span>
+            <span class="cat" onclick="buscar('Tesla IA')">Tesla</span>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="container-noticias">
+
+        </div>
+        <script src="app.js"></script>
+    </main>
+
+    <section id="end" class="section has-img-bg pb-0 footer_background">
+        <div class="container">
+            <div class="row2 align-items-center">
+                <div class="col-md-5 my-3">
+                    <h4 class="mb-0">Equipo</h4>
+                    <p class="mb-4">
+                        Valeria Jahzeel Castañon<br>
+                        Miguel Angel Sanchez Zanjuampa<br>
+                        Eliud Roman Gutierrez Perez<br>
+                        Dominguez Iglesias Edgar Ivan<br>
+                        Navil Pineda Rugerio<br>
+                    </p>
+
+                    <p class="mb-4">Unidad Profesional Interdisplinaria Campus Tlaxcala</p>
+                </div>
+                <div id="footer_nav" class="col-md-7">
+                    <h4>
+                        Explora nuestras otras secciones!
+                    </h4>
+                    <nav class="footer_nav">
+                        <a href="index.html">Inicio</a><br>
+                        <a href="tutos.html">Canales de Youtube</a><br>
+                        <a href="etica.html">Ética de la IA</a><br>
+                        <a href="paradigmas.html">Paradigmas</a><br>
+                    </nav>
+                </div>
+            </div>
+
+            <footer class="mt-5 py-4 border-top border-secondary">
+                <p>
+                    <em>Equipo1 &copy; <time>2023</time> Todos los derechos reservados xd</em>
+                </p>
+            </footer>
+        </div>
+    </section>
+
+</body>
+
+</html>

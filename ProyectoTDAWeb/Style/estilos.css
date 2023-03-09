@@ -1,0 +1,219 @@
+h1,
+h2,
+h3,
+h4,
+nav,
+footer {
+    font-family: "Trebuchet MS", "Lucida Grande", Tahoma, sans-serif;
+}
+
+
+body {
+    font-family: Georgia, Cambria, "Times New Roman", serif;
+    font-size: 100%;
+    background-color: rgb(18, 23, 26);
+
+}
+
+main {
+    background-color: rgba(29, 30, 32, 0.753);
+    margin-top: 2em;
+    margin-right: 3em;
+    margin-bottom: 1em;
+    margin-left: 3em;
+    padding: 3.5em;
+    border-radius: 25px;
+}
+
+
+h1 {
+    float: left;
+    color: #e2d7d7;
+    font-size: 3.5rem;
+    position: relative;
+}
+
+h1 span {
+    position: absolute;
+    right: 0;
+    width: 0;
+    background: rgba(29, 30, 32, 0.753);
+    border-left: 1px solid #000;
+    animation: maquina 20s infinite alternate;
+}
+
+@keyframes maquina {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
+}
+
+h2 {
+    color: #3e3b41;
+    font-size: 2.75rem;
+    margin-left: 1.8em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    color: #18191a;
+    font-size: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 1.8em;
+
+}
+
+code{
+    font-size: 2em;
+    background-color: #1e1b30;;
+}
+
+p {
+    color: #e2d7d7;
+    font-size: 1.2rem;
+    margin-top: 1em;
+    margin-right: 5em;
+    margin-bottom: 1.5em;
+    margin-left: 5em;
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+}
+
+.p {
+    color: #e2d7d7;
+    font-size: 1.2rem;
+    margin-top: 1em;
+    margin-right: 1.8em;
+    margin-bottom: 1.8em;
+    margin-left: 1.8em;
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+}
+
+.input_txt {
+    border-radius: 9px;
+    background-color: rgb(31, 58, 85);
+}
+
+img.redimension {
+    margin-left: 5em;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+img.redimensionLogos {
+    margin-left: 8em;
+    margin-right: 4em;
+    max-width: 110px;
+    max-height: 110px;
+}
+
+.select_b{
+    font-size: 20px;
+}
+
+
+.sidepanel {
+    width: 0;
+    position: fixed;
+    z-index: 9999999;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+
+table {
+    border-collapse: separate;
+    border-spacing: 5px;
+    background: #0c0f0f url("gradient.gif") bottom left repeat-x;
+    color: #fff;
+}
+
+td,
+th {
+    background: #3e4e4611;
+    color: #000;
+    border-radius: 10px;
+}
+
+
+
+.contenedor {
+    margin: auto;
+    display: table;
+}
+
+
+
+
+UL.col3 {
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;
+    FLOAT: left;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 15px 0px;
+    WIDTH: 100%;
+    PADDING-TOP: 0px;
+    LIST-STYLE-TYPE: none
+}
+
+UL.col3 LI {
+    PADDING-RIGHT: 2px;
+    DISPLAY: inline;
+    PADDING-LEFT: 2px;
+    FLOAT: left;
+    PADDING-BOTTOM: 2px;
+    WIDTH: 30%;
+    PADDING-TOP: 2px
+}
+
+
+
+
+
+
+
+
+
+.sidepanel a:hover {
+    color: #34b1fa;
+}
+
+.sidepanel a.active {
+    color: #34b1fa;
+}
+
+.sidepanel .closebtn {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+.openbtn {
+    cursor: pointer;
+    background-color: transparent;
+    color: rgb(103, 78, 173);
+    border: none;
+}
