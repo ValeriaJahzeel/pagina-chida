@@ -1,7 +1,7 @@
 body {
     font-family: Georgia, times, 'Times New Roman', serif;
     font-size: 100%;
-    background-image: url(../images/Background.png);
+    background-image: url(../../images/noticias/Background.png);
     background-repeat: repeat-y;
     background-color: rgb(12, 12, 12);
 }
@@ -34,7 +34,7 @@ header {
 }
 
 .ENCABEZADO {
-    background-image: url(../images/Malla.png);
+    background-image: url(../../images/noticias/Malla.png);
     background-color: #000000;
     padding: 0.5em;
 }
