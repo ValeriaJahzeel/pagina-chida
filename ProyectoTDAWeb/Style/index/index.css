@@ -342,7 +342,7 @@ Header
   position: relative;
   height: 100vh;
   min-height: 500px;
-  background: url(../images/header1.jpg) no-repeat center center fixed;
+  background: url(../../images/index/header1.jpg) no-repeat center center fixed;
   background-size: cover;
   overflow: hidden;
 }
@@ -462,17 +462,73 @@ End header
 ---------------------------------------------------------------------*/
 
 /*--------------------------------------------------------------------- 
-Main
+Main-Inicio
 ---------------------------------------------------------------------*/
-.intro {
-  padding: 10px 250px 10px 250px;
+#intro {
+  display: flex;
+}
+
+#intro .right {
+  width: 60%;
+  padding: 1em 5em 0 10em;
   overflow: auto;
 }
 
-.intro p {
-  font-size: 20px;
+#intro .intro-title-p1 {
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
+#intro .intro-title-p2 {
+  font-size: 3.5em;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+
+#intro p {
+  padding-top: 2em;
+  font-size: 0.8em;
+  color: #929191;
+}
+
+#intro .intro-img {
+  display: block;
+  width: 60%;
+  margin-right: 1em;
+  opacity: 0.7;
+}
+
+/*--------------------------------------------------------------------- 
+Main-Moden Aproach
+---------------------------------------------------------------------*/
+#modernApproach {
+  width: 80%;
+  margin-top: 4em;
+  padding: 1em 0 0 10em;
+  display: flex;
+}
+
+#modernApproach h2{
+  font-size: 3rem;
+}
+
+#modernApproach h3{
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+#modernApproach p{
+  padding-top: 2em;
+  font-size: 0.7rem;
+  color: #929191;
+}
+
+#modernApproach .md-img {
+  display: block;
+  margin-right: 1em;
+  opacity: 0.7;
+}
 .section {
   padding: 50px 0 100px 10px;
 }
@@ -547,8 +603,7 @@ Main
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  padding: 0;
 }
 
 .col {
@@ -561,11 +616,17 @@ Main
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 0;
+  width: 100%;
   word-wrap: break-word;
   background-color: #1f1f27;
   border: 1px solid rgba(81, 82, 83, 0.25);
   border-radius: 0;
+  padding: 1em;
+}
+
+.card-container{
+  width: 23%;
+  margin-right: 1em;
 }
 
 .card-body {
@@ -612,7 +673,7 @@ Main
 }
 
 .card-img-top {
-  width: 70%;
+  height: 10em;
   border-top-left-radius: calc(0 - 1px);
   border-top-right-radius: calc(0 - 1px);
 }
@@ -641,46 +702,4 @@ Main
 }
 /*--------------------------------------------------------------------- 
 End main
----------------------------------------------------------------------*/
-
-/*--------------------------------------------------------------------- 
-Footer
----------------------------------------------------------------------*/
-.footer {
-  display: flex;
-  min-height: 70px;
-  border-top: 1px solid #dee2e6;
-  align-items: center;
-}
-
-section .footer_background {
-  background: url(../images/header1.jpg);
-}
-
-.footer a,
-.footer p {
-  color: #343a40;
-  padding: 4px 0;
-  display: inline-block;
-  margin: 0;
-}
-
-.footer .brand {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 6px;
-}
-
-#footer-nav {
-  text-decoration: none;
-}
-
-@media (max-width: 767.98px) {
-  .footer {
-    padding: 15px 0;
-    flex-direction: column;
-  }
-}
-/*--------------------------------------------------------------------- 
-End footer
 ---------------------------------------------------------------------*/

@@ -1,29 +1,38 @@
-function inBD(usuario, contra){
-    console.log(usuario);
-    console.log(contra);
+function isInBD(usuario, correo){
     let accept = false;
     BD.forEach((user) =>{
-        if((usuario === user.user || usuario === user.email) && (contra === user.password)){
+        if((usuario === user.user) && (correo === user.email)){
             accept = true;
         }
     });
     return accept;
 }
 
-
-function submitForm(event) {
+function singUp(event) {
     event.preventDefault();
 
     const user = document.getElementById('user-name');
     const usuario = user.value;
     console.log(usuario);
 
+    const email = document.getElementById('user-email');
+    const correo = email.value;
+    console.log(correo);
+
     const pass = document.getElementById('password');
     const contra = pass.value;
     console.log(contra);
 
-    if(inBD(usuario, contra)){
-        window.location.href = "./user-login.html?id" + usuario;
+    let data = {
+        user: usuario,
+        email: correo,
+        password: contra,
+    };
+
+    if(!isInBD(usuario, correo)){
+        BD.push(data);
+        console.log(BD);
+        //window.location.href = "./login.html";
     }
     else{
         //Mandar mensaje de error
@@ -32,5 +41,6 @@ function submitForm(event) {
     }
     
     user.value = '';
+    email.value = '';
     pass.value = '';
 }

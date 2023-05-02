@@ -147,6 +147,7 @@ h1 {
     color: #fff;
     text-align: center;
     margin-top: 1em;
+    margin-bottom: 0;
 }
 
 .form-box {
@@ -158,7 +159,7 @@ h1 {
 .form-box {
     position: absolute;
     width: 60vw;
-    height: 60vh;
+    height: 70vh;
     margin: 1em 0 0 17em;
     font-size: 1em;
     background: rgb(9, 9, 14);
@@ -232,6 +233,13 @@ button {
     font-size: 0.8em;
     color: #63b9ff;
     text-align: left;
+}
+
+#error-message a {
+    text-decoration: none;
+    color: #63b9ff;
+    float: right;
+    transform: translateY(-2em);
 }
 
 .hide {
