@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style/login/login.css">
     <script src="JavaScript/navegacion.js" defer></script>
+    <script src="JavaScript/login/login.js" defer></script>
     <title>Iniciar Sesion</title>
 </head>
 <body>
+    <!--Fondo-->
+    <section>
+        <div class="shape"></div>
+        <video src="images/login/1058962721-preview.mp4" autoplay="true" muted="true" loop="true"></video>
+    </section>
+
     <!--Header-->
     <header>
         <!--Barra de Navegacion-->
@@ -30,9 +37,30 @@
         </nav>
 
         <section class="account-in">
-            <p>¿Ya tienes una cuenta?</p>
-            <a href="" class="sing-in">Iniciar Sesión</a>
+            <p>¿No tienes una cuenta?</p>
+            <a href="" class="sing-in">Registrate -></a>
         </section>
     </header>
+
+    <main>
+        <h1>Inicio de Sesión</h1>
+            <section class="form-box">
+                <form onsubmit="submitForm(event)">
+                    <section class="data">
+                        <div class="inputbox">
+                            <input type="text" id="username" required>
+                            <label for="">Nombre de usuario o correo electrónico</label>
+                        </div>
+
+                        <div class="inputbox">
+                            <input type="password" id="password" required>
+                            <label for="">Contraseña</label>
+                        </div>
+                    </section>
+                    <button type="submit">Log in</button>
+                    <p id="message"></p>
+                </form>
+            </section>
+    </main>
 </body>
 </html>

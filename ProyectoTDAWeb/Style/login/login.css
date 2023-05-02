@@ -4,24 +4,41 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  font-family: sans-serif;
+    font-family: sans-serif;
 }
 
 body {
-  margin: 0;
-  padding: 10 10 10 10;
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #ffffff;
-  text-align: left;
-  background: rgb(12, 10, 20);
+    margin: 0;
+    padding: 10 10 10 10;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: left;
+
 }
 
+.shape {
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 105%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
+    z-index: -2;
+}
 
 /*-------------------------------------------------------------------- 
 Barra de navegacion
@@ -45,23 +62,24 @@ Barra de navegacion
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #26093d;
+    background-color: rgb(9, 9, 14);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 2em;
 }
 
 .sidepanel .closebtn {
+    margin-left: 6.5em;
     cursor: pointer;
     position: absolute;
-    top: 0.5em;
-    right: 0.8em;
+    float: right;
     font-size: 1.5em;
     color: #fff;
     font-weight: bold;
     outline: none;
     border: none;
     background: none;
+    transform: translateY(-70%);
 }
 
 .sidepanel a {
@@ -100,12 +118,102 @@ Header
 ---------------------------------------------------------------------*/
 header {
     display: flex;
+    width: 100vw;
 }
 
 .account-in {
-    margin-left: 60vw;
+    margin-left: 73vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
 }
 
 .account-in p {
     color: #c7c7c7;
+}
+
+.account-in a {
+    margin-left: 1em;
+    color: #fff;
+    text-decoration: none;
+}
+
+/*-------------------------------------------------------------------- 
+Main
+---------------------------------------------------------------------*/
+h1 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.form-box {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.form-box {
+    position: absolute;
+    width: 60vw;
+    height: 60vh;
+    margin: 1em 0 0 17em;
+    font-size: 1em;
+    background: rgb(9, 9, 14);
+    
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+}
+
+.data {
+    width: 25em;
+}
+
+.inputbox {
+    position: relative;
+    margin: 2em 0;
+    border-bottom: 2pt solid #fff;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 0.5em;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -0.5em;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 3.5em;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+
+button {
+    width: 50%;
+    height: 3em;
+    border-radius: 2.5em;
+    background: #3a7caf;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 1em;
 }
