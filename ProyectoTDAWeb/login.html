@@ -13,7 +13,7 @@
     <!--Fondo-->
     <section>
         <div class="shape"></div>
-        <video src="images/login/1058962721-preview.mp4" autoplay="true" muted="true" loop="true"></video>
+        <video src="images/login/1068541757-preview.mp4" autoplay="true" muted="true" loop="true"></video>
     </section>
 
     <!--Header-->
@@ -47,6 +47,11 @@
         <section class="form-box">
             <form onsubmit="submitForm(event)">
                 <section class="data">
+                    <div id="error-message" class="hide">
+                        <img src="images/login/alerta.png" alt="Error">
+                        <p>Error: Usuario o contraseña incorrectas</p>
+                    </div>
+
                     <div class="inputbox">
                         <input type="text" id="user-name" required>
                         <label for="">Nombre de usuario o correo electrónico</label>
@@ -58,7 +63,6 @@
                     </div>
                 </section>
                 <button type="submit">Log in</button>
-                <p id="message"></p>
             </form>
         </section>
     </main>

@@ -19,25 +19,28 @@ body {
     font-weight: 400;
     color: #ffffff;
     text-align: left;
-
+    background-color: #05060e;
 }
 
-.shape {
-    background-color: rgba(0,0,0,0.7);
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    z-index: -1;
+/*-------------------------------------------------------------------- 
+Header
+---------------------------------------------------------------------*/
+header{
+    display: flex;
+    align-items: center;
 }
 
-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 105%;
-    min-height: 100%;
-    transform: translateX(calc((100% - 100vw) / 2));
-    z-index: -2;
+header button{
+    font-weight: bold;
+    background-color: transparent;
+    outline: none;
+    border-radius: 0.5em;
+    border: 0.1em solid #fff;
+    width: 8em;
+    height: 3em;
+    color: #fff;
+    margin-top: 0.5em;
+    margin-left: 85em;
 }
 
 /*-------------------------------------------------------------------- 
@@ -117,13 +120,12 @@ Main
 ---------------------------------------------------------------------*/
 
 .data {
-    height: 85vh;
-    width: 75vw;
-    background-color: rgb(1, 50, 78);
-    border-radius: 2em;
-    margin-left: 17em;
+    width: 100%;
     margin-top: 1em;
     padding: 1em 0 0 3em;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 h1 {
@@ -131,29 +133,35 @@ h1 {
     color: #fff;
 }
 
-h2 {
+.data h2 {
     font-size: 1em;
+    font-weight: lighter;
 }
 
 .publish {
-    margin: 0.5em;
+    margin-top: 1em;
     display: flex;
-    width: 82%;
     overflow: hidden;
+    justify-content: center;
 }
 
 .activity {
     margin-right: 1em;
+    background: linear-gradient(#080a1b, #111647);
+    border-radius: 0.5em;
+    padding: 1em;
+    width: 25%;
 }
 
 .activity .code {
     background-color: rgb(0, 0, 0);
     border-radius: 0.5em;
     padding: 1em;
-    font-size: 0.8em;
+    font-size: 0.7em;
     overflow: hidden;
-    width: 20em;
+    width: 15em;
     height: 6em;
+    text-align: left;
 }
 
 .activity code {
@@ -164,6 +172,7 @@ h2 {
     font-size: 0.7em;
     padding-left: 0.5em;
     width: 90%;
+    text-align: left;
 }
 
 .activity time {
@@ -175,45 +184,87 @@ h2 {
     padding-left: 1em;
 }
 
-.courses {
+.activity .visit {
+    text-decoration: none;
+    width: 30%;
+    font-size: 1.5em;
+    color: #ffffff;
+    float: right;
+    padding-left: 1em;
+    margin: -2em 1.5em 0 0;
+    font-weight: bold;
+}
+
+.cursos {
+    margin-top: 3em;
     display: flex;
 }
 
-.course {
-    width: 30%;
+.cursos .title {
+    width: 40%;
+    padding-top: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h2 {
+    font-weight: bold;
+    font-size: 3em;
+    padding-left: 1.5em;
+    margin-bottom: 0;
+}
+
+.title .all {
+    font-weight: bold;
+    background-color: transparent;
+    outline: none;
+    border-radius: 0.5em;
+    border: 0.1em solid #fff;
+    width: 8em;
+    height: 3em;
+    color: #fff;
+    margin-left: 4em;
+}
+
+.courses {
+    width: 50%;
     display: grid;
-    align-items: flex-start;
-    margin-right: 2em;
-    background-color: #000000;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.course {
+    margin: 0 2em 2em 0;
+    background: linear-gradient(to right, #440f70, #ac29ac);
     padding: 1em;
     border-radius: 0.5em;
+    justify-content: flex-start;
+    text-align: left;
 }
 
 .course .thumbnail {
     margin: 0;
-    width: 10em;
-    border: 2pt solid #ffffff;
 }
 
 .course .title {
     width: 80%;
-    font-size: 0.6em;
-    margin-bottom: 0;
+    font-size: 0.7em;
+    text-align: left;
 }
 
 .course .author {
-    margin: 0;
-    font-size: 0.5em;
+    margin: 1em 0;
+    font-size: 0.8em;
 }
 
 .continue a {
     cursor: pointer;
     width: 35%;
     text-align: center;
-    background-color: #63b9ff;
+    background-color: transparent;
+    border: 1pt solid #fff;
     border-radius: 0.5em;
     padding: 0.5em;
-    color: #000000;
+    color: #fff;
     font-size: 0.8em;
     outline: none;
     text-decoration: none;

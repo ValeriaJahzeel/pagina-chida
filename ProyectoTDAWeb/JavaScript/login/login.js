@@ -1,3 +1,45 @@
+const BD = [
+    {
+        user: 'Navil',
+        email: 'navil@gmail.com',
+        password: '123456',
+    },
+    {
+        user: 'Valeria',
+        email: 'valeria@gmail.com',
+        password: '123456',
+    },
+    {
+        user: 'Miguel',
+        email: 'miguel@gmail.com',
+        password: '123456',
+    },
+    {
+        user: 'Eliud',
+        email: 'eliud@gmail.com',
+        password: '123456',
+    },
+    {
+        user: 'Daniel',
+        email: 'daniel@gmail.com',
+        password: '123456',
+    }
+];
+
+
+function inBD(usuario, contra){
+    console.log(usuario);
+    console.log(contra);
+    let accept = false;
+    BD.forEach((user) =>{
+        if((usuario === user.user || usuario === user.email) && (contra === user.password)){
+            accept = true;
+        }
+    });
+    return accept;
+}
+
+
 function submitForm(event) {
     event.preventDefault();
 
@@ -5,7 +47,19 @@ function submitForm(event) {
     const usuario = user.value;
     console.log(usuario);
 
-    window.location.href = "./index.html?id" + usuario;
+    const pass = document.getElementById('password');
+    const contra = pass.value;
+    console.log(contra);
 
+    if(inBD(usuario, contra)){
+        window.location.href = "./user-login.html?id" + usuario;
+    }
+    else{
+        //Mandar mensaje de error
+        const error = document.getElementById('error-message');
+        error.classList.remove('hide');
+    }
+    
     user.value = '';
+    pass.value = '';
 }

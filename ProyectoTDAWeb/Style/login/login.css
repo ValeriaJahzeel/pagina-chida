@@ -217,3 +217,23 @@ button {
     font-weight: 600;
     margin: 1em;
 }
+
+
+#error-message {
+    align-items: center;
+}
+
+#error-message img{
+    float: left;
+    margin-right: 1em;
+}
+
+#error-message p{
+    font-size: 0.8em;
+    color: #63b9ff;
+    text-align: left;
+}
+
+.hide {
+    display: none;
+}
