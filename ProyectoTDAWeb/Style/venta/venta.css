@@ -1,0 +1,179 @@
+/*Generales*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 10 10 10 10;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: left;
+  background: rgb(12, 10, 20);
+}
+
+
+/*-------------------------------------------------------------------- 
+Barra de navegacion
+---------------------------------------------------------------------*/
+.sidepanel_btn {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    margin-left: 2em;
+    margin-top: 1.5em;
+}
+
+.sidepanel {
+    width: 0;
+    position: fixed;
+    z-index: 9999999;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #26093d;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 2em;
+}
+
+.sidepanel .closebtn {
+    cursor: pointer;
+    position: absolute;
+    top: 0.5em;
+    right: 0.8em;
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.sidepanel a {
+    padding: 0 0.5em 0.5em 1.5em;
+    text-decoration: none;
+    font-size: 0.8em;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidepanel a:hover {
+    color: #3873a3;
+}
+
+.sidepanel a.active {
+    color: #3873a3;
+}
+
+.openbtn {
+    margin-top: 1em;
+    margin-left: 1em;
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+}
+
+.nav-bar {
+    position: relative;
+}
+
+
+/*-------------------------------------------------------------------- 
+Header
+---------------------------------------------------------------------*/
+header {
+    display: flex;
+}
+
+/*-------------------------------------------------------------------- 
+Main
+---------------------------------------------------------------------*/
+.intro h1 {
+    font-size: 3em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #26093d;
+}
+
+.recomend h2{
+    margin-left: 3em;
+}
+
+
+.courses {
+    display: flex;
+}
+
+.course {
+    margin-left: 4.5em;
+    width: 15%;
+    display: grid;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.course .thumbnail {
+    margin: 0;
+    width: 12em;
+    border: 2pt solid #ffffff;
+}
+
+.course .title {
+    font-size: 0.8em;
+    margin-bottom: 0;
+}
+
+.course .author {
+    margin: 0;
+    font-size: 0.7em;
+}
+
+.course .rate p{
+    margin: 0;
+    color: #3873a3;
+    font-size: 0.7em;
+}
+
+.course .price {
+    margin: 0;
+    font-weight: bold;
+}
+.course .add{
+    margin-top: 1em;
+}
+
+.add a {
+    cursor: pointer;
+    width: 25%;
+    background-color: #cf8310;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    color: #fff;
+    font-size: 0.8em;
+    outline: none;
+    text-decoration: none;
+}
+
+.add img {
+    cursor: pointer;
+    float: right;
+    transform: translateX(-3em);
+}
