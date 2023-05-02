@@ -1,0 +1,221 @@
+/*Generales*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 10 10 10 10;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: left;
+
+}
+
+.shape {
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 105%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
+    z-index: -2;
+}
+
+/*-------------------------------------------------------------------- 
+Barra de navegacion
+---------------------------------------------------------------------*/
+.sidepanel_btn {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    margin-left: 2em;
+    margin-top: 1.5em;
+}
+
+.sidepanel {
+    width: 0;
+    position: fixed;
+    z-index: 9999999;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(9, 9, 14);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 2em;
+}
+
+.sidepanel .closebtn {
+    margin-left: 8em;
+    cursor: pointer;
+    position: absolute;
+    float: right;
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    background: none;
+    transform: translateY(-70%);
+}
+
+.sidepanel a {
+    padding: 0 0.5em 0.5em 1.5em;
+    text-decoration: none;
+    font-size: 0.8em;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidepanel a:hover {
+    color: #3873a3;
+}
+
+.sidepanel a.active {
+    color: #3873a3;
+}
+
+.openbtn {
+    margin-top: 1em;
+    margin-left: 1em;
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+}
+
+.nav-bar {
+    position: relative;
+}
+
+/*-------------------------------------------------------------------- 
+Main
+---------------------------------------------------------------------*/
+
+.data {
+    height: 85vh;
+    width: 75vw;
+    background-color: rgb(1, 50, 78);
+    border-radius: 2em;
+    margin-left: 17em;
+    margin-top: 1em;
+    padding: 1em 0 0 3em;
+}
+
+h1 {
+    font-size: 2em;
+    color: #fff;
+}
+
+h2 {
+    font-size: 1em;
+}
+
+.publish {
+    margin: 0.5em;
+    display: flex;
+    width: 82%;
+    overflow: hidden;
+}
+
+.activity {
+    margin-right: 1em;
+}
+
+.activity .code {
+    background-color: rgb(0, 0, 0);
+    border-radius: 0.5em;
+    padding: 1em;
+    font-size: 0.8em;
+    overflow: hidden;
+    width: 20em;
+    height: 6em;
+}
+
+.activity code {
+    color: #63b9ff;
+}
+
+.activity p {
+    font-size: 0.7em;
+    padding-left: 0.5em;
+    width: 90%;
+}
+
+.activity time {
+    width: 30%;
+    font-size: 0.5em;
+    color: #aaa9a9;
+    float: right;
+    transform: translateY(-190%);
+    padding-left: 1em;
+}
+
+.courses {
+    display: flex;
+}
+
+.course {
+    width: 30%;
+    display: grid;
+    align-items: flex-start;
+    margin-right: 2em;
+    background-color: #000000;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.course .thumbnail {
+    margin: 0;
+    width: 10em;
+    border: 2pt solid #ffffff;
+}
+
+.course .title {
+    width: 80%;
+    font-size: 0.6em;
+    margin-bottom: 0;
+}
+
+.course .author {
+    margin: 0;
+    font-size: 0.5em;
+}
+
+.continue a {
+    cursor: pointer;
+    width: 35%;
+    text-align: center;
+    background-color: #63b9ff;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    color: #000000;
+    font-size: 0.8em;
+    outline: none;
+    text-decoration: none;
+    float: right;
+}

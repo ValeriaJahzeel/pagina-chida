@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/user-login/user-login.css">
+    <script src="JavaScript/navegacion.js"></script>
+    <title>Usuario</title>
+</head>
+<body>
+    <!--Fondo-->
+    <section>
+        <video src="images/login/1058962721-preview.mp4" autoplay="true" muted="true" loop="true"></video>
+    </section>
+
+    <!--Header-->
+    <header>
+        <!--Barra de Navegacion-->
+        <nav class="nav-bar">
+            <div class="sidepanel-btn">
+                <div class="row">
+                    <button class="openbtn" onclick="openNav()"><img src="images/menu.png" alt="menu"></button>
+                </div>
+            </div>
+        
+            <div id="mySidepanel" class="sidepanel">
+                <button class="closebtn" onclick="closeNav()">x</button>
+
+                <a href="Noticias.html">Noticias</a><br>
+                <a href="tutos.html">Canales de Youtube</a><br>
+                <a href="etica.html">Ética de la IA</a><br>
+                <a href="paradigmas.html">Paradigmas</a><br>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="data">
+            <h1>Bienvenid@</h1>
+            <h2>Tus publicaciones</h2>
+            <section class="publish">
+                <article class="activity">
+                    <section class="code">
+                        <code>
+                            console.log('Hola mundo');<br>
+                            console.log('Hola mundo');<br>
+                            console.log('Hola mundo');<br>
+                            console.log('Hola mundo');<br>
+                        </code>
+                    </section>
+                    <p>Hola, tengo la siguiente duda: </p>
+                    <time>02-05-23 14:00</time>
+                </article>
+
+                <article class="activity">
+                    <section class="code">
+                        <code>
+                            setTimeout(function () {<br>
+                                $('.loader_bg').fadeToggle();<br>
+                            }, 1500);<br>
+                        </code>
+                    </section>
+                    <p>Hola, tengo la siguiente duda: </p>
+                    <time>02-05-23 14:00</time>
+                </article>
+
+                <article class="activity">
+                    <section class="code">
+                        <code>
+                            $(document).ready(function(){<br>
+                                $(".main-menu ul li.megamenu").mouseover(function(){<br>
+                                    if (!$(this).parent().hasClass("#wrapper")){<br>
+                                    $("#wrapper").addClass('overlay');<br>
+                                    }<br>
+                                });<br>
+                                $(".main-menu ul li.megamenu").mouseleave(function(){<br>
+                                    $("#wrapper").removeClass('overlay');<br>
+                                });<br>
+                            });<br>
+                        </code>
+                    </section>
+                    <p>Hola, tengo la siguiente duda: </p>
+                    <time>02-05-23 14:00</time>
+                </article>
+            </section>
+
+            <h2>Tus cursos</h2>
+            <section class="courses">
+                <section class="course">
+                    <img src="images/venta/curso2.jpg" alt="Curso Completo de Desarrollo Web 2023 Bootcamp" class="thumbnail">
+                    <p class="title">Curso Completo de Desarrollo Web 2023 Bootcamp</p>
+                    <p class="author">Dr. Angela Yu</p>
+                    <section class="continue">
+                        <a href="">Continuar</a>
+                    </section>
+                </section>
+
+                <section class="course">
+                    <img src="images/venta/curso3.jpg" alt="Curso Completo de Desarrollo Web 2023 Bootcamp" class="thumbnail">
+                    <p class="title">Curso Completo de Desarrollo Web 2023 Bootcamp</p>
+                    <p class="author">Dr. Angela Yu</p>
+                    <section class="continue">
+                        <a href="">Continuar</a>
+                    </section>
+                </section>
+
+                <section class="course">
+                    <img src="images/venta/curso4.jpg" alt="Curso Completo de Desarrollo Web 2023 Bootcamp" class="thumbnail">
+                    <p class="title">Curso Completo de Desarrollo Web 2023 Bootcamp</p>
+                    <p class="author">Dr. Angela Yu</p>
+                    <section class="continue">
+                        <a href="">Continuar</a>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
