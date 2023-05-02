@@ -1,6 +1,7 @@
 function submitForm(event) {
     event.preventDefault();
-    const usuario = document.querySelector('input[type="text"]').value;
+    const user = document.getElementById('user-name');
+    const usuario = user.value;
     console.log(usuario);
-    window.location.href = "./index.html";
+    window.location.href = "./index.html?id" + usuario;
 }
