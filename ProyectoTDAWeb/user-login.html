@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style/user-login/user-login.css">
+    <link rel="stylesheet" href="Style/footer.css">
     <script src="JavaScript/navegacion.js"></script>
     <title>Usuario</title>
 </head>
+
 <body>
     <!--Header-->
     <header>
@@ -18,7 +21,7 @@
                     <button class="openbtn" onclick="openNav()"><img src="images/menu.png" alt="menu"></button>
                 </div>
             </div>
-        
+
             <div id="mySidepanel" class="sidepanel">
                 <button class="closebtn" onclick="closeNav()">x</button>
 
@@ -28,12 +31,12 @@
                 <a href="paradigmas.html">Paradigmas</a><br>
             </div>
         </nav>
-        <button class="logout">Cerrar Sesión</button>
+        <a href="index.html"><button class="logout">Cerrar Sesión</button></a>
     </header>
-    
+
     <main>
         <section class="data">
-            <h1>Bienvenid@</h1>
+            <h1>Bienvenid@ Usuario</h1>
             <h2>Tus publicaciones</h2>
             <section class="publish">
                 <article class="activity">
@@ -89,7 +92,7 @@
                     <h2>Tus cursos</h2>
                     <button class="all">Ver todos</button>
                 </div>
-                
+
                 <section class="courses">
                     <section class="course">
                         <img src="images/user-login/diploma.png" alt="Curso" class="thumbnail">
@@ -126,11 +129,63 @@
                             <a href="">Continuar</a>
                         </section>
                     </section>
-                    
+
                 </section>
             </section>
 
         </section>
+
+        <section class="tools">
+            <h3>Tus herramientas</h3>
+            <article class="tool">
+                <p>Accede al generador de imagenes creadas con IA</p>
+                <a href="midJourney.html"><button class="visit">Visitar</button></a>
+            </article>
+            <article class="tool">
+                <p>Accede a las noticias de última hora acerca de la IA</p>
+                <a href="noticias.html"><button class="visit">Visitar</button></a>
+            </article>
+            <article class="tool">
+                <p>Accede a la galería de videos sobre IA</p>
+                <a href="tutoriales.html"><button class="visit">Visitar</button></a>
+            </article>
+        </section>
     </main>
+
+    <section id="end" class="section has-img-bg pb-0 footer_background">
+        <div class="container">
+            <div class="row2 align-items-center">
+                <div class="col-md-5 my-3">
+                    <h4 class="mb-0">Equipo</h4>
+                    <p class="mb-4">
+                        Valeria Jahzeel Castañon<br>
+                        Miguel Angel Sanchez Zanjuampa<br>
+                        Eliud Roman Gutierrez Perez<br>
+                        Dominguez Iglesias Edgar Ivan<br>
+                        Navil Pineda Rugerio<br>
+                    </p>
+
+                    <p class="mb-4">Unidad Profesional Interdisplinaria Campus Tlaxcala</p>
+                </div>
+                <div id="footer_nav" class="col-md-7">
+                    <h4>
+                        Explora nuestras otras secciones!
+                    </h4>
+                    <nav class="footer_nav">
+                        <a href="noticias.html">Noticias</a><br>
+                        <a href="tutoriales.html">Canales de Youtube</a><br>
+                        <a href="etica.html">Ética de la IA</a><br>
+                        <a href="paradigmas.html">Paradigmas</a><br>
+                    </nav>
+                </div>
+            </div>
+
+            <footer class="mt-5 py-4 border-top border-secondary">
+                <p>
+                    <em>Equipo1 &copy; <time>2023</time> Todos los derechos reservados xd</em>
+                </p>
+            </footer>
+        </div>
+    </section>
 </body>
 </html>

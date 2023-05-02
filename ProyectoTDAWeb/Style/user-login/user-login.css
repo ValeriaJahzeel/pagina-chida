@@ -19,7 +19,7 @@ body {
     font-weight: 400;
     color: #ffffff;
     text-align: left;
-    background-color: #05060e;
+    background: linear-gradient(#07091d, #111647);
 }
 
 /*-------------------------------------------------------------------- 
@@ -28,6 +28,7 @@ Header
 header{
     display: flex;
     align-items: center;
+    position: fixed;
 }
 
 header button{
@@ -40,7 +41,8 @@ header button{
     height: 3em;
     color: #fff;
     margin-top: 0.5em;
-    margin-left: 85em;
+    margin-left: 82em;
+    cursor: pointer;
 }
 
 /*-------------------------------------------------------------------- 
@@ -129,8 +131,10 @@ Main
 }
 
 h1 {
-    font-size: 2em;
+    text-align: left;
+    font-size: 3em;
     color: #fff;
+    margin-left: 3em;
 }
 
 .data h2 {
@@ -147,14 +151,14 @@ h1 {
 
 .activity {
     margin-right: 1em;
-    background: linear-gradient(#080a1b, #111647);
+    background: linear-gradient(#155052, #36878a);
     border-radius: 0.5em;
     padding: 1em;
     width: 25%;
 }
 
 .activity .code {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     border-radius: 0.5em;
     padding: 1em;
     font-size: 0.7em;
@@ -165,7 +169,7 @@ h1 {
 }
 
 .activity code {
-    color: #63b9ff;
+    color: #243bb9;
 }
 
 .activity p {
@@ -176,11 +180,10 @@ h1 {
 }
 
 .activity time {
-    width: 30%;
-    font-size: 0.5em;
-    color: #aaa9a9;
+    width: 40%;
+    font-size: 0.7em;
     float: right;
-    transform: translateY(-190%);
+    transform: translateY(-180%);
     padding-left: 1em;
 }
 
@@ -196,7 +199,7 @@ h1 {
 }
 
 .cursos {
-    margin-top: 3em;
+    margin-top: 8em;
     display: flex;
 }
 
@@ -224,6 +227,7 @@ h1 {
     height: 3em;
     color: #fff;
     margin-left: 4em;
+    cursor: pointer;
 }
 
 .courses {
@@ -269,4 +273,42 @@ h1 {
     outline: none;
     text-decoration: none;
     float: right;
+}
+
+.tools {
+    background-color: #07091d;
+    padding: 3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tools h3{
+    padding: 0 1em;
+    font-size: 2.5em;
+}
+
+.tools .tool {
+    background-color: #1c9452;
+    padding: 1em;
+    margin-right: 1.5em;
+    width: 30%;
+    color: #ffffff;
+    border-radius: 1em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.tool .visit {
+    cursor: pointer;
+    width: 35%;
+    height: 3em;
+    background-color: transparent;
+    border: 1pt solid #fff;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    color: #fff;
+    font-size: 0.8em;
+    outline: none;
+    text-decoration: none;
 }

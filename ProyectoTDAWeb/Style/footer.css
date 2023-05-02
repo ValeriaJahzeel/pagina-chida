@@ -47,7 +47,7 @@ section.footer_background {
 }
 
 .container {
-     width: 100%;
+     
      margin-right: auto;
      margin-left: auto;
 }
@@ -84,8 +84,6 @@ section.footer_background {
      -webkit-flex-wrap: wrap;
      -ms-flex-wrap: wrap;
      flex-wrap: wrap;
-     margin-right: -520px;
-     margin-left: -100px;
 }
 
 .align-items-center {
@@ -143,10 +141,12 @@ section.footer_background {
 
 .border-top {
      border-top: 2px solid #ffffff !important;
-     margin-left: -9em;
-     margin-right: -9em;
 }
 
 .border-secondary {
      border-color: #ffffff !important;
+}
+
+a:visited {
+     color: #fff;;
 }
