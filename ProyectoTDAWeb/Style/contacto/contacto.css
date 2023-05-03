@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../../images/contacto/upiit2.jpg');
+    background-size: 100%;
+}
+
+.formulario {
+    width: 400px;
+    background: rgb(255, 255, 255);
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.formulario h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.cajas {
+    width: 100%;
+    background: #fff5f8;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #700520;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: rgb(61, 61, 61);
+}
+
+.formulario p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    color: #000;
+}
+
+.formulario a {
+    text-decoration: none;
+    color: #f600f6;
+}
+
+.formulario a:hover {
+    color: rgb(99, 8, 8);
+    text-decoration: underline;
+}
+
+.formulario .send {
+    width: 100%;
+    background: #700520;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+.formulario .cancel{
+    width: 100%;
+    background: #d5bdc3;
+    border: none;
+    padding: 12px;
+    color: #700520;
+    font-size: 16px;   
+}
+
+.formulario .send:hover{
+    background-color: #7c7c7cbd;
+    color: #000;
+    cursor: pointer;
+}
+
+.formulario .cancel:hover{
+    background-color: #7c7c7cbd;
+    cursor: pointer;
+}
