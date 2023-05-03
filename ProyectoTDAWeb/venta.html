@@ -1,96 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="JavaScript/ventas/ventas.js"></script>
+    <script src="JavaScript/navegacion.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
     <link rel="stylesheet" href="Style/venta/venta.css">
-    <script src="JavaScript/navegacion.js" defer></script>
-    <title>Document</title>
 </head>
+
 <body>
+
+
     <header>
-        <nav class="nav-bar">
-            <div class="sidepanel-btn">
-                <div class="row">
-                    <button class="openbtn" onclick="openNav()"><img src="images/menu.png" alt="menu"></button>
-                </div>
-            </div>
-        
+        <section class="ENCABEZADO">
+
             <div id="mySidepanel" class="sidepanel">
-                <button class="closebtn" onclick="closeNav()">x</button>
-
-                <a href="Noticias.html">Noticias</a><br>
-                <a href="tutos.html">Canales de Youtube</a><br>
-                <a href="etica.html">Ética de la IA</a><br>
-                <a href="paradigmas.html">Paradigmas</a><br>
+                <div class="closebtn" onclick="closeNav()">x</div>
+                <nav>
+                    <a href="index.html">Inicio</a><br>
+                    <a href="noticias.html">Noticias</a><br>
+                    <a href="tutoriales.html">Canales de Youtube</a><br>
+                    <a href="etica.html">Ética de la IA</a><br>
+                </nav>
             </div>
-        </nav>
+            <div class="row">
+                <button class="openbtn" onclick="openNav()"><img src="images/menu.png"></button>
+            </div>
+        </section>
     </header>
-    <main>
-        <section class="intro">
-            <h1>Cursos Recomendados</h1>
-        </section>
-        <section class="recomend">
-            <h2>Los estudiantes han visitado</h2>
-            <section class="courses">
-                <section class="course">
-                    <img src="images/venta/curso1.jpg" alt="Curso Completo de Desarrollo Web 2023 Bootcamp" class="thumbnail">
-                    <p class="title">Curso Completo de Desarrollo Web 2023 Bootcamp</p>
-                    <p class="author">Dr. Angela Yu</p>
-                    <section class="rate">
-                        <p class="cal">4.7</p>
-                    </section>
-                    <p class="price">MX$199</p>
-                    <section class="add">
-                        <a href="" class="buy">Añadir al carrito</a>
-                        <img src="images/venta/me-gusta.png" alt="Like">
-                    </section>
-                </section>
 
-                <section class="course">
-                    <img src="images/venta/curso1.jpg" alt="Curso Completo de Desarrollo Web 2023 Bootcamp" class="thumbnail">
-                    <p class="title">Curso Completo de Desarrollo Web 2023 Bootcamp</p>
-                    <p class="author">Dr. Angela Yu</p>
-                    <section class="rate">
-                        <p class="cal">4.7</p>
-                    </section>
-                    <p class="price">MX$199</p>
-                    <section class="add">
-                        <a href="" class="buy">Añadir al carrito</a>
-                        <img src="images/venta/me-gusta.png" alt="Like">
-                    </section>
-                </section>
 
-                <section class="course">
-                    <img src="images/venta/curso1.jpg" alt="Curso Completo de Desarrollo Web 2023 Bootcamp" class="thumbnail">
-                    <p class="title">Curso Completo de Desarrollo Web 2023 Bootcamp</p>
-                    <p class="author">Dr. Angela Yu</p>
-                    <section class="rate">
-                        <p class="cal">4.7</p>
-                    </section>
-                    <p class="price">MX$199</p>
-                    <section class="add">
-                        <a href="" class="buy">Añadir al carrito</a>
-                        <img src="images/venta/me-gusta.png" alt="Like">
-                    </section>
-                </section>
 
-                <section class="course">
-                    <img src="images/venta/curso1.jpg" alt="Curso Completo de Desarrollo Web 2023 Bootcamp" class="thumbnail">
-                    <p class="title">Curso Completo de Desarrollo Web 2023 Bootcamp</p>
-                    <p class="author">Dr. Angela Yu</p>
-                    <section class="rate">
-                        <p class="cal">4.7</p>
-                    </section>
-                    <p class="price">MX$199</p>
-                    <section class="add">
-                        <a href="" class="buy">Añadir al carrito</a>
-                        <img src="images/venta/me-gusta.png" alt="Like">
-                    </section>
-                </section>
-            </section>
-        </section>
-    </main>
+    <div class="container">
+        <div class="row">
+            <!-- Elementos generados a partir del JSON -->
+            <main id="items" class="col-sm-8 row"></main>
+            <!-- Carrito -->
+            <aside class="col-sm-4">
+                <br>
+                <h2>Carrito</h2>
+                <!-- Elementos del carrito -->
+                <ul id="carrito" class="list-group"></ul>
+                <hr>
+                <!-- Precio total -->
+                <p class="text-right">Total: <span id="total"></span>&dollar;</p>
+                <button id="boton-vaciar" class="btn btn-danger">Cancelar</button>
+                <button id="boton-enviar" class="btn btn-primary">Comprar</button>
+                <div id="alert" style="display:none;">¡No se ha seleccionado ningun curso!</div>
+            </aside>
+        </div>
+    </div>
 </body>
+
 </html>
