@@ -19,7 +19,7 @@ body {
     font-weight: 400;
     color: #ffffff;
     text-align: left;
-    background: linear-gradient(#07091d, #111647);
+    background: linear-gradient(rgb(0, 0, 0), rgb(12, 10, 20));
 }
 
 /*-------------------------------------------------------------------- 
@@ -43,6 +43,10 @@ header button{
     margin-top: 0.5em;
     margin-left: 82em;
     cursor: pointer;
+}
+
+header button a{
+    text-decoration: none;
 }
 
 /*-------------------------------------------------------------------- 
@@ -134,7 +138,8 @@ h1 {
     text-align: left;
     font-size: 3em;
     color: #fff;
-    margin-left: 3em;
+    margin: 0 3.5em 0 2em;
+    padding: 1em;
 }
 
 .data h2 {
