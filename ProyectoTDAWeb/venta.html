@@ -7,34 +7,57 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <script src="JavaScript/ventas/ventas.js"></script>
-    <script src="JavaScript/navegacion.js"></script>
-
+    <link rel="stylesheet" href="Style/venta/venta.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
         integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="Style/venta/venta.css">
+
+    <link rel="stylesheet" href="Style/index/index.css">
+     <link rel="stylesheet" href="Style/footer.css">
+
+     <script src="JavaScript/navegacion.js"></script>
+
+
+     <link rel="shoortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
+    <!--- Barra de navegacion y encabezado -->
+    <section>
+        <div class="sidepanel_btn">
+             <div class="row">
+                  <div class="col-md-11">
+                       <button class="openbtn" onclick="openNav()"><img src="images/menu.png" alt="menu"></button>
+                  </div>
+             </div>
+        </div>
 
+        <div id="mySidepanel" class="sidepanel">
+             <div class="closebtn" onclick="closeNav()">x</div>
+             <nav>
+                  <a href="Noticias.html">Noticias</a><br>
+                  <a href="tutos.html">Canales de Youtube</a><br>
+                  <a href="etica.html">Ética de la IA</a><br>
+                  <a href="paradigmas.html">Paradigmas</a><br>
+             </nav>
+        </div>
 
-    <header>
-        <section class="ENCABEZADO">
-
-            <div id="mySidepanel" class="sidepanel">
-                <div class="closebtn" onclick="closeNav()">x</div>
-                <nav>
-                    <a href="Noticias.html">Noticias</a><br>
-                    <a href="tutoriales.html">Canales de Youtube</a><br>
-                    <a href="etica.html">Ética de la IA</a><br>
-                    <a href="paradigmas.html">Paradigmas</a><br>
-                </nav>
-            </div>
-            <div class="row">
-                <button class="openbtn" onclick="openNav()"><img src="images/menu.png"></button>
-            </div>
-        </section>
-    </header>
+        <header class="header">
+             <div class="overlay">
+                  <h1 class="title">Venta de cursos</h1>
+                  <h1 class="subtitle">Todo tipo de cursos sobre IA</h1>
+             </div>
+             <div class="shape">
+                  <svg viewBox="0 0 1500 200">
+                       <path
+                            d="m 0,240 h 1500.4828 v -71.92164 c 0,0 -286.2763,-81.79324 -743.19024,-81.79324 C 300.37862,86.28512 0,168.07836 0,168.07836 Z" />
+                  </svg>
+             </div>
+             <div class="mouse-icon">
+                  <div class="wheel"></div>
+             </div>
+        </header>
+   </section>
 
 
 
@@ -58,10 +81,45 @@
         </div>
     </div>
 
-    <footer>
-        <h3>Quieres vender tus cursos?</h3>
-        <a href="contacto.html">Contactanos!</a>
-    </footer>
+    <!-- Footer -->
+    <section id="end" class="section has-img-bg pb-0 footer_background">
+        <div class="container">
+            <h3>Quieres vender tus cursos?</h3>
+            <a href="contacto.html">Contactanos!</a>
+        </div>
+        
+        <div class="container">
+             <div class="row2 align-items-center">
+                  <div class="col-md-5 my-3">
+                       <h4 class="mb-0">Equipo</h4>
+                       <p class="mb-4">
+                            Valeria Jahzeel Castañon<br>
+                            Miguel Angel Sanchez Zanjuampa<br>
+                            Eliud Roman Gutierrez Perez<br>
+                            Dominguez Iglesias Edgar Ivan<br>
+                            Navil Pineda Rugerio<br>
+                       </p>
+
+                       <p class="mb-4">Unidad Profesional Interdisplinaria Campus Tlaxcala</p>
+                  </div>
+                  <div id="footer_nav" class="col-md-7">
+                       <h4>
+                            ¿Quieres explorar todas nuestras herramientas?
+                       </h4>
+                       <nav class="footer_nav">
+                            <a href="login.html">Inicia Sesión</a><br>
+                            <a href="registro.html">Registrate</a><br>
+                       </nav>
+                  </div>
+             </div>
+
+             <footer class="mt-5 py-4 border-top border-secondary">
+                  <p>
+                       <em>Equipo1 &copy; <time>2023</time> Todos los derechos reservados xd</em>
+                  </p>
+             </footer>
+        </div>
+   </section>
 </body>
 
 </html>
