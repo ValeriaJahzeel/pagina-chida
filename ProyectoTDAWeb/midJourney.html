@@ -8,13 +8,45 @@
     <link rel="stylesheet" href="Style/midJourney/midJourney.css">
     <link rel="stylesheet" href="Style/footer.css">
     <script src="JavaScript/midJourney/midJourney.js" defer></script>
+    <script src="JavaScript/navegacion.js" defer></script>
     <title>AI Gallery</title>
 </head>
 <body>
+    <section>
+        <div class="sidepanel_btn">
+            <button class="openbtn" onclick="openNav()"><img src="images/menu.png" alt="menu"></button>
+        </div>
+
+        <div id="mySidepanel" class="sidepanel">
+            <div class="closebtn" onclick="closeNav()">x</div>
+            <nav>
+                <a href="index-user.html">Inicio</a><br>
+                <a href="user-login.html">Tu cuenta</a><br>
+                <a href="venta.html">Comprar cursos</a><br>
+                <a href="Noticias.html">Noticias</a><br>
+                <a href="tutoriales.html">Canales de Youtube</a><br>
+                <a href="etica.html">Ética de la IA</a><br>
+                <a href="paradigmas.html">Paradigmas</a><br>
+            </nav>
+        </div>
+
+        <header class="header">
+            <div class="overlay">
+                <h1 class="title">Prueba el generador de imagenes de MidJourney</h1>
+            </div>
+            <div class="shape">
+                <svg viewBox="0 0 1500 200">
+                    <path
+                        d="m 0,240 h 1500.4828 v -71.92164 c 0,0 -286.2763,-81.79324 -743.19024,-81.79324 C 300.37862,86.28512 0,168.07836 0,168.07836 Z" />
+                </svg>
+            </div>
+            <div class="mouse-icon">
+                <div class="wheel"></div>
+            </div>
+        </header>
+    </section>
+
     <main>
-        <section class="title">
-            <h1>Prueba el generador de imagenes de MidJourney</h1>
-        </section>
         <section class="generate">
             <input type="text" class="number" placeholder="Introduce el número de imagenes">
             <button class="try">Probar</button>

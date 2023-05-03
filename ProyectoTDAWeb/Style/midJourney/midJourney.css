@@ -20,16 +20,198 @@ body {
     background-color: black;
 }
 
-.title{
-    text-align: center;
+/*--------------------------------------------------------------------- 
+Header
+---------------------------------------------------------------------*/
+.header {
+    position: relative;
+    height: 100vh;
+    min-height: 500px;
+    background: url(../../images/index/header1.jpg) no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.header .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
 }
 
-h1{
-    margin-top: 1em;
-    margin-bottom: 0.5em;
+.header .overlay .subtitle {
+    font-size: calc(13px + (18 - 13) * ((100vw - 320px) / (1200 - 320)));
+    font-weight: 400;
+    margin-bottom: 0;
+    letter-spacing: 8px;
+    word-spacing: 10px;
+    text-align: center;
+    opacity: .8;
+}
+
+.header .overlay .title {
     font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.header .shape svg {
+    position: absolute;
+    bottom: -28px;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+.header .shape svg path {
+    color: #fff;
+}
+
+@media (max-width: 1199.98px) {
+    .header .shape svg {
+        bottom: -15px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .header .shape svg {
+        bottom: 0;
+    }
+}
+
+.header.components-header {
+    max-height: 450px !important;
+    height: 450px;
+    display: none;
+    background-position: center -140px;
+}
+
+.header.components-header .title {
+    font-size: calc(40px + (90 - 40) * ((100vw - 320px) / (1200 - 320)));
+    font-weight: bold;
+    margin-top: -8%;
+}
+
+.header.components-header .shape svg path {
+    fill: #f5f8fc;
+}
+
+.header-title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    opacity: .8;
+    color: #444;
+}
+
+.mouse-icon {
+    border: 2px solid #fff;
+    border-radius: 16px;
+    height: 40px;
+    width: 24px;
+    display: block;
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    margin: auto;
+}
+
+.mouse-icon .wheel {
+    position: relative;
+    border-radius: 10px;
+    background: #fff;
+    width: 2px;
+    height: 6px;
+    top: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: drop;
+    animation-duration: 1.4s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+/*--------------------------------------------------------------------- 
+  End header
+  ---------------------------------------------------------------------*/
+/*--------------------------------------------------------------------- 
+Barra de navegacion
+---------------------------------------------------------------------*/
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.sidepanel {
+    width: 0;
+    position: fixed;
+    z-index: 9999999;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #26093d;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidepanel_btn {
+    width: 0;
+    position: fixed;
+    z-index: 9999999;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    margin-left: 4px;
+    margin-top: 20px;
+}
+
+
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidepanel a:hover {
+    color: #3873a3;
+}
+
+.sidepanel a.active {
+    color: #3873a3;
+}
+
+.sidepanel .closebtn {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    color: #fff;
+}
+
+.openbtn {
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    border: none;
 }
 
 .generate {
@@ -51,13 +233,13 @@ h1{
     font-size: 1em;
 }
 
-.number::placeholder{
+.number::placeholder {
     padding: 1em;
     color: #b3b3b3;
     margin: 1em;
 }
 
-.try{
+.try {
     font-family: "Popins", sans-serif;
     background-color: rgb(30, 31, 85);
     border: none;
@@ -69,7 +251,7 @@ h1{
     margin-top: 2em;
 }
 
-#image-container{
+#image-container {
     margin: 1em;
     background-color: rgb(19, 19, 19);
     min-height: 18em;
