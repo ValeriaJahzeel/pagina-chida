@@ -177,3 +177,14 @@ Main
     float: right;
     transform: translateX(-3em);
 }
+
+
+/**/
+
+.col-sm-4{
+    background-color: rgb(65, 63, 63);
+}
+
+.list-group-item{
+    background-color: rgb(65, 63, 63);
+}
