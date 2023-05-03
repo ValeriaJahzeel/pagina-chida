@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Style/contacto/contacto.css">
+    <script src="JavaScript/contacto/contacto.js" defer></script>
+
+    <title>Contacto</title>
+</head>
+
+<body>
+
+    <form class="formulario" id="formulario" method="get" action="">
+        <h4>Contacto</h4>
+        <input class="cajas" type="text" name="nombre" id="nombre" placeholder="Nombre completo" maxlength="40">
+        <input class="cajas" type="text" name="curso" id="curso" placeholder="Curso" maxlength="50">
+        <input class="cajas" type="email" name="correo" id="correo" placeholder="Correo" maxlength="30">
+        <input class="cajas" type="text" name="numero" id="numero" placeholder="Número de teléfono" maxlength="10">
+
+        <p>Da una breve descripcion de tu curso:</p>
+        <textarea name="description" rows="3" class="cajas"></textarea>
+
+        <p>Comunícate a través de nuestro <a href="https://wa.me/2461269019">whatsapp</a></p>
+
+        <input class="send" type="submit" value="Enviar">
+        <input class="cancel" type="reset" value="Cancelar">
+    </form>
+</body>
+
+</html>
