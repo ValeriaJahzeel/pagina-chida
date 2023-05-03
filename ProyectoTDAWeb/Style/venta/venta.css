@@ -13,11 +13,10 @@ html {
 
 body {
   margin: 0;
-  padding: 10 10 10 10;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  color: #ffffff;
+  color: white !important;
   text-align: left;
   background: rgb(12, 10, 20);
 }
@@ -117,6 +116,16 @@ Main
     margin-left: 3em;
 }
 
+.venta{
+    padding: 10em 10em;
+}
+
+#alert{
+    align-items: center;
+    color: red;
+    padding-top: 1em;
+}
+
 
 .courses {
     display: flex;
@@ -186,5 +195,6 @@ Main
 }
 
 .list-group-item{
-    background-color: rgb(65, 63, 63);
+    color: #26093d;
+    /* background-color: rgb(65, 63, 63) !important;  */
 }
