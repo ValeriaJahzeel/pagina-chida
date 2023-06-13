@@ -317,3 +317,99 @@ h1 {
     outline: none;
     text-decoration: none;
 }
+
+.hide {
+    display: none;
+}
+
+.popupCourses {
+    position: absolute;
+    background: linear-gradient(to right, #440f70, #ac29ac);
+    padding: 2em;
+    border-radius: 1em;
+    text-align: left;
+}
+
+.popupCourses .title {
+    width: 100%;
+    margin: 0;
+    padding-top: 0.5em;
+}
+
+.popupCourses .btns .continue {
+    margin-top: 2em;
+}
+
+.popupCourses .continue {
+    cursor: pointer;
+    width: 35%;
+    text-align: center;
+    background-color: transparent;
+    border: 1pt solid #fff;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    color: #fff;
+    font-size: 0.8em;
+    outline: none;
+    text-decoration: none;
+    float: right;
+}
+
+.popupCourses .delete {
+    cursor: pointer;
+    width: 35%;
+    text-align: center;
+    background-color: transparent;
+    border: 1pt solid #fff;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    color: #fff;
+    font-size: 0.8em;
+    outline: none;
+    text-decoration: none;
+    float: right;
+    margin-right: 2em;
+    margin-left: 5em;
+}
+
+.shape {
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 20em;
+    transform: translateX(-3em);
+    z-index: 0;
+}
+
+.delete {
+    z-index: 9999;
+}
+
+
+.modify-price::placeholder {
+    color: #fff;
+}
+
+.modify-price {
+    margin-bottom: 2em;
+    background-color: transparent;
+    border: 1pt solid #ffffff;
+}
+
+.btn-modify {
+    cursor: pointer;
+    width: 35%;
+    text-align: center;
+    background-color: transparent;
+    border: 1pt solid #fff;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    color: #fff;
+    font-size: 0.8em;
+    outline: none;
+    text-decoration: none;
+    float: right;
+    margin-right: 2em;
+    margin-left: 5em;
+    margin-bottom: 1em;
+}

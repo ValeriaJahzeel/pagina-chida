@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     let carrito = [];
+    let total = 0;
+    let precios = [];
     const divisa = '$';
     const DOMitems = document.querySelector('#items');
     const DOMcarrito = document.querySelector('#carrito');
@@ -36,45 +38,58 @@ document.addEventListener('DOMContentLoaded', () => {
     const DOMbotonVaciar = document.querySelector('#boton-vaciar');
     const DOMbotonEnviar = document.querySelector('#boton-enviar');
 
+    let cont = 1;
+
     // Funciones
 
     /**
     * Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
     */
     function renderizarProductos() {
-        baseDeDatos.forEach((info) => {
-            // Estructura
-            const miNodo = document.createElement('div');
-            miNodo.classList.add('card', 'col-sm-4');
-            // Body
-            const miNodoCardBody = document.createElement('div');
-            miNodoCardBody.classList.add('card-body');
-            // Titulo
-            const miNodoTitle = document.createElement('h5');
-            miNodoTitle.classList.add('card-title');
-            miNodoTitle.textContent = info.nombre;
-            // Imagen
-            const miNodoImagen = document.createElement('img');
-            miNodoImagen.classList.add('img-fluid');
-            miNodoImagen.setAttribute('src', info.imagen);
-            // Precio
-            const miNodoPrecio = document.createElement('p');
-            miNodoPrecio.classList.add('card-text');
-            miNodoPrecio.textContent = `${info.precio}${divisa}`;
-            // Boton 
-            const miNodoBoton = document.createElement('button');
-            miNodoBoton.classList.add('btn', 'btn-primary');
-            miNodoBoton.textContent = 'Añadir al Carrito';
-            miNodoBoton.setAttribute('marcador', info.id);
-            miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
-            // Insertamos
-            miNodoCardBody.appendChild(miNodoImagen);
-            miNodoCardBody.appendChild(miNodoTitle);
-            miNodoCardBody.appendChild(miNodoPrecio);
-            miNodoCardBody.appendChild(miNodoBoton);
-            miNodo.appendChild(miNodoCardBody);
-            DOMitems.appendChild(miNodo);
-        });
+        // Peticion AJAX
+        axios.get(`http://localhost:3000/api/cursos`)
+            .then(response => {
+                const datos = response.data;
+                // Crear los nuevo elementos HTML
+                datos.forEach(data => {
+                    // Estructura
+                    const miNodo = document.createElement('div');
+                    miNodo.classList.add('card', 'col-sm-4');
+                    // Body
+                    const miNodoCardBody = document.createElement('div');
+                    miNodoCardBody.classList.add('card-body');
+                    // Titulo
+                    const miNodoTitle = document.createElement('h5');
+                    miNodoTitle.classList.add('card-title');
+                    miNodoTitle.textContent = data.nombreCurso;
+                    // Imagen
+                    const miNodoImagen = document.createElement('img');
+                    miNodoImagen.classList.add('img-fluid');
+                    miNodoImagen.setAttribute('src', `images/venta/curso${cont}.jpg`);
+                    cont += 1;
+                    // Precio
+                    const miNodoPrecio = document.createElement('p');
+                    miNodoPrecio.classList.add('card-text');
+                    miNodoPrecio.textContent = `${data.precio}${divisa}`;
+                    // Boton 
+                    const miNodoBoton = document.createElement('button');
+                    miNodoBoton.classList.add('btn', 'btn-primary');
+                    miNodoBoton.textContent = 'Añadir al Carrito';
+                    miNodoBoton.setAttribute('marcador', data.idcurso);
+                    miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
+                    // Insertamos
+                    miNodoCardBody.appendChild(miNodoImagen);
+                    miNodoCardBody.appendChild(miNodoTitle);
+                    miNodoCardBody.appendChild(miNodoPrecio);
+                    miNodoCardBody.appendChild(miNodoBoton);
+                    miNodo.appendChild(miNodoCardBody);
+                    DOMitems.appendChild(miNodo);
+                });
+            
+            })
+            .catch(error => {
+                console.log(error);
+            });
     }
 
     /**
@@ -98,33 +113,68 @@ document.addEventListener('DOMContentLoaded', () => {
         const carritoSinDuplicados = [...new Set(carrito)];
         // Generamos los Nodos a partir de carrito
         carritoSinDuplicados.forEach((item) => {
+            console.log(item);
             // Obtenemos el item que necesitamos de la variable base de datos
-            const miItem = baseDeDatos.filter((itemBaseDatos) => {
-                // ¿Coincide las id? Solo puede existir un caso
-                return itemBaseDatos.id === parseInt(item);
+            const miItem = '';
+
+            axios.get(`http://localhost:3000/api/cursos/${item}`)
+            .then(response => {
+                const miItem = response.data;
+
+                // Cuenta el número de veces que se repite el producto
+                const numeroUnidadesItem = carrito.reduce((total, itemId) => {
+                    // ¿Coincide las id? Incremento el contador, en caso contrario no mantengo
+                    return itemId === item ? total += 1 : total;
+                }, 0);
+
+                // Creamos el nodo del item del carrito
+                const miNodo = document.createElement('li');
+                miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
+                miNodo.textContent = `${numeroUnidadesItem} x ${miItem.nombreCurso} - ${miItem.precio}${divisa}`;
+
+                // Boton de borrar
+                const miBoton = document.createElement('button');
+                miBoton.classList.add('btn', 'btn-danger', 'mx-5');
+                miBoton.textContent = 'X';
+                miBoton.style.marginLeft = '1rem';
+                miBoton.dataset.item = item;
+                miBoton.addEventListener('click', borrarItemCarrito);
+                // Mezclamos nodos
+                miNodo.appendChild(miBoton);
+                DOMcarrito.appendChild(miNodo);
+                        
+            })
+            .catch(error => {
+            console.log(error);
             });
-            // Cuenta el número de veces que se repite el producto
-            const numeroUnidadesItem = carrito.reduce((total, itemId) => {
-                // ¿Coincide las id? Incremento el contador, en caso contrario no mantengo
-                return itemId === item ? total += 1 : total;
-            }, 0);
-            // Creamos el nodo del item del carrito
-            const miNodo = document.createElement('li');
-            miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
-            miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}${divisa}`;
-            // Boton de borrar
-            const miBoton = document.createElement('button');
-            miBoton.classList.add('btn', 'btn-danger', 'mx-5');
-            miBoton.textContent = 'X';
-            miBoton.style.marginLeft = '1rem';
-            miBoton.dataset.item = item;
-            miBoton.addEventListener('click', borrarItemCarrito);
-            // Mezclamos nodos
-            miNodo.appendChild(miBoton);
-            DOMcarrito.appendChild(miNodo);
+
+            
+            //const miItem = baseDeDatos.filter((itemBaseDatos) => {
+                // ¿Coincide las id? Solo puede existir un caso
+              //  return itemBaseDatos.id === parseInt(item);
+            //});
+            
         });
         // Renderizamos el precio total en el HTML
-        DOMtotal.textContent = calcularTotal();
+        //console.log(carrito);
+        precios = [];
+        // De cada elemento obtenemos su precio
+        carrito.forEach(item =>{
+            axios.get(`http://localhost:3000/api/cursos/${item}`)
+            .then(response => {
+                let itemF = response.data;
+                precios.push(itemF.precio);
+                const initialValue = 0;
+                total = precios.reduce(
+                    (accumulator, currentValue) => accumulator + currentValue,
+                    initialValue
+                );
+                DOMtotal.textContent = total;
+            })
+            .catch(error => {
+                console.log(error);
+            });
+        });
     }
 
     /**
@@ -137,23 +187,9 @@ document.addEventListener('DOMContentLoaded', () => {
         carrito = carrito.filter((carritoId) => {
             return carritoId !== id;
         });
+        DOMtotal.textContent = 0;
         // volvemos a renderizar
         renderizarCarrito();
-    }
-
-    /**
-     * Calcula el precio total teniendo en cuenta los productos repetidos
-     */
-    function calcularTotal() {
-        // Recorremos el array del carrito 
-        return carrito.reduce((total, item) => {
-            // De cada elemento obtenemos su precio
-            const miItem = baseDeDatos.filter((itemBaseDatos) => {
-                return itemBaseDatos.id === parseInt(item);
-            });
-            // Los sumamos al total
-            return total + miItem[0].precio;
-        }, 0).toFixed(2);
     }
 
     /**
@@ -162,6 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function vaciarCarrito() {
         // Limpiamos los productos guardados
         carrito = [];
+        DOMtotal.textContent = 0;
         // Renderizamos los cambios
         renderizarCarrito();
     }
@@ -171,13 +208,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     DOMbotonEnviar.addEventListener('click', () => {
-        if (calcularTotal() == 0) {
+        if (total == 0) {
             var alertDiv = document.getElementById("alert");
             alertDiv.style.display = "block"; // Muestra la alerta
 
             setTimeout(function () {
                 alertDiv.style.display = "none"; // Oculta la alerta después de 3 segundos
             }, 3000);
+        }
+        else{
+            // Se guardan los cursos en la cuenta del usuario
+            carrito.forEach(item =>{
+                axios.post('http://localhost:3000/api/courseUser', {
+                    curso: item,
+                    usuario: 'navil@gmail.com'
+                })
+                .then(response => {
+                    if (response.status === 200) {
+                        if (response.data.sqlMessage !== undefined) {
+                            alert(response.data.sqlMessage);
+                        }
+                        updateIngredients();
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+            });
+            
+            alert("Compra generada");
+            total = 0;
+            vaciarCarrito();
         }
     });
 

@@ -16,11 +16,11 @@ function submitForm(event) {
 
     const user = document.getElementById('user-name');
     const usuario = user.value;
-    console.log(usuario);
+    //console.log(usuario);
 
     const pass = document.getElementById('password');
     const contra = pass.value;
-    console.log(contra);
+    //console.log(contra);
 
     if(inBD(usuario, contra)){
         window.location.href = "./user-login.html?id" + usuario;
