@@ -1,5 +1,5 @@
 const cursosContainer = document.querySelector('.courses');
-let usuario = 'profesor';
+const usuario = 'profe';
 
 function modifyCourse(precioM, nombre){
     axios.patch(`http://localhost:3000/api/cursos/${nombre}`, {
@@ -89,13 +89,6 @@ function showAllCourses(){
                 const message = document.createElement('p');
                 message.textContent = 'Modificar el precio';
 
-                const modifyPrice = document.createElement('input');
-                if (usuario == 'profesor'){
-                    modifyPrice.type = 'text';
-                    modifyPrice.placeholder = 'Introduce el precio del curso';
-                    modifyPrice.classList.add('modify-price');
-                }
-
                 const btn = document.createElement('button');
                 btn.classList.add('btn-modify');
                 btn.textContent = 'Modificar';
@@ -111,7 +104,7 @@ function showAllCourses(){
                 });
 
                 section.appendChild(message);
-                section.appendChild(modifyPrice);
+                section.appendChild(modifyCoursePrice)
                 
                 section.appendChild(btn);
                 section.appendChild(continueBtn);
@@ -177,12 +170,9 @@ function showCourses(){
                 const message = document.createElement('p');
                 message.textContent = 'Modificar el precio';
 
-                let modifyPrice = document.createElement('input');
-                if (usuario == 'profesor'){
-                    modifyPrice.type = 'text';
-                    modifyPrice.placeholder = 'Introduce el precio del curso';
-                    modifyPrice.classList.add('modify-price');
-                }
+                const modifyCoursePrice = document.createElement('input');
+                modifyCoursePrice.textContent = 'text';
+                modifyCoursePrice.classList.add('modify-price');
 
                 const btn = document.createElement('button');
                 btn.classList.add('btn-modify');
@@ -190,23 +180,20 @@ function showCourses(){
 
                 deleteBtn.addEventListener('click', () =>{
                     console.log('Hola');
-                    deleteCourse(title.textContent)
+                    deleteCourse(title.textContent);
                 });
 
                 btn.addEventListener('click', ()=>{
-                    modifyCourse(modifyPrice.value, title.textContent);
+                    modifyCourse(modifyCoursePrice.value, title.textContent);
                 });
 
                 section.append(message);
-                section.appendChild(modifyPrice);
+                section.appendChild(modifyCoursePrice);
                 section.appendChild(btn);
                 section.appendChild(continueBtn);
                 section.appendChild(deleteBtn);
 
                 cursosContainer.appendChild(section);
-                
-
-                
 
             })
             .catch(error =>{

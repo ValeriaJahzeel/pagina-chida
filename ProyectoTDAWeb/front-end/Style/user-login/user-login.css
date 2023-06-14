@@ -391,9 +391,11 @@ h1 {
 }
 
 .modify-price {
+    margin-top: 0.5em;
     margin-bottom: 2em;
     background-color: transparent;
     border: 1pt solid #ffffff;
+    color: #fff;
 }
 
 .btn-modify {

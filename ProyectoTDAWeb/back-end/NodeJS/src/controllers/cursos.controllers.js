@@ -84,7 +84,7 @@ export const updateCurso = async (req, res)=> {
     const {precio} = req.body;
     
     try {
-        const [result] = await pool.query('UPDATE curso SET precio=? WHERE nombreCurso=?', [precio, nombre]);
+        const [result] = await pool.query('UPDATE curso SET precio=? WHERE nombreCurso=?', [precio, req.params.nombre]);
         console.log(result);
         
         if(result.affectedRows === 0){

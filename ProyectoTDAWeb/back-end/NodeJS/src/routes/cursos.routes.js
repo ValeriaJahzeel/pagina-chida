@@ -15,3 +15,4 @@ router.delete('/cursos/:nombre', deleteCurso);
 
 
 export default router
+
