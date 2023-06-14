@@ -32,7 +32,6 @@ export const getCurso = async (req, res)=> {
     }
 };
 
-// Agregar un nuevo ingrediente
 export const createCurso = async (req, res)=> {
     console.log(req.body);
     const {nombre, autor, precio, numAlumnos} = req.body;
