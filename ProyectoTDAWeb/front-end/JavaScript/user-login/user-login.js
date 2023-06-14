@@ -104,9 +104,9 @@ function showAllCourses(){
                 });
 
                 section.appendChild(message);
-                section.appendChild(modifyCoursePrice)
+                //section.appendChild(modifyCoursePrice);
                 
-                section.appendChild(btn);
+                //section.appendChild(btn);
                 section.appendChild(continueBtn);
                 section.appendChild(deleteBtn);
 
@@ -188,8 +188,8 @@ function showCourses(){
                 });
 
                 section.append(message);
-                section.appendChild(modifyCoursePrice);
-                section.appendChild(btn);
+                //section.appendChild(modifyCoursePrice);
+                //section.appendChild(btn);
                 section.appendChild(continueBtn);
                 section.appendChild(deleteBtn);
 

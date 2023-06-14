@@ -1,6 +1,6 @@
 import {pool} from '../db.js';
 
-// Recuperar ingredientes
+// Recuperar cursos
 export const getCursos = async (req, res)=> {
     try{
         const [rows] = await pool.query('SELECT * FROM curso');
@@ -13,6 +13,7 @@ export const getCursos = async (req, res)=> {
     }
 };
 
+// Recuperar un curso específico
 export const getCurso = async (req, res)=> {
     try{
         //throw new Error('Error inesperado');
@@ -53,7 +54,7 @@ export const createCurso = async (req, res)=> {
     }
 };
 
-// Eliminar un ingrediente
+// Eliminar un curso
 export const deleteCurso = async (req, res)=> {
     try {
 
@@ -78,6 +79,7 @@ export const deleteCurso = async (req, res)=> {
     }
 };
 
+// Actualizar el precio de un curso
 export const updateCurso = async (req, res)=> {
     const {nombre} = req.params.nombre;
     console.log(req.params.nombre);
